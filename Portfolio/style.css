@@ -17,95 +17,141 @@ body {
     width: 100%;
 }
 
-/* Make the page responsive */
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-/* Home Page Section */
-.home-section {
-    text-align: center;
-    padding: 50px 0;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.home-section h1 {
-    font-size: 2.5em;
+/* Typography */
+h1, h2 {
+    font-family: 'Arial', sans-serif;
     color: #fff;
 }
 
-.home-section p {
-    font-size: 1.2em;
-    color: #ccc;
+p {
+    color: #ddd;
+    font-size: 1em;
+    line-height: 1.8em; /* Double-spaced for better readability */
 }
 
-/* Image Gallery in Home Section */
-.home-images {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.home-images img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.home-images img:hover {
-    transform: scale(1.1);
-}
-
-/* Projects Page Styles */
-.projects-section {
-    padding: 50px 0;
-    background-color: #111;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.projects-section h2 {
-    text-align: center;
-    font-size: 2.5em;
-    color: #fff;
-}
-
-.project-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.project-container .project-item {
-    background-color: #333;
-    border-radius: 10px;
-    width: 300px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-
-.project-container .project-item:hover {
-    transform: scale(1.05);
-}
-
-.project-container img {
+/* Header Section */
+header {
     width: 100%;
-    height: 200px;
+    height: 100vh; /* Full-screen height */
+    background: url('your-header-image.jpg') no-repeat center center/cover; /* Replace with your actual image path */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    z-index: 2;
+}
+
+header nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Overlay Effect for Header */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+/* Home Section */
+.home-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 20px;
+    background-color: #111; /* Subtle background for contrast */
+}
+
+.home-section .text-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #222; /* Make paragraph background noticeable */
+    border-radius: 8px;
+    text-align: left;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.home-section .text-container p {
+    margin: 10px 0;
+}
+
+.home-section img {
+    flex: 1;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Explore Projects Section */
+.explore-projects {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #222;
+    color: #fff;
+}
+
+.explore-projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.project-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-row .project-item {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.project-row img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
     object-fit: cover;
+}
+
+.project-row p {
+    margin-top: 10px;
+    color: #ddd;
 }
 
 /* Footer Styles */
@@ -116,4 +162,28 @@ footer {
     color: #fff;
     max-width: 800px;
     margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header nav {
+        font-size: 1em;
+    }
+
+    .home-section {
+        flex-direction: column;
+    }
+
+    .home-section img {
+        max-width: 80%;
+    }
+
+    .project-row {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
