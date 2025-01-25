@@ -24,13 +24,13 @@ p {
 
 /* Navigation Bar */
 nav {
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: flex-end; /* Align to the right */
     background-color: transparent; /* Transparent to show the background container */
     padding: 10px 20px;
     position: fixed; /* Keep navbar visible when scrolling */
-    top: 0;
+    top: 20px;
     z-index: 10;
 }
 
