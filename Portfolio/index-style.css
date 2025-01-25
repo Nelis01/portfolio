@@ -56,10 +56,7 @@ nav a:hover {
     background-attachment: fixed;
     position: relative;
     z-index: 1; /* Place it behind the text and nav */
-    filter: brightness(50%); /* Reduce the brightness of the background image */
-    /* Optional: Add a dark overlay for extra dimming */
     background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
-    background-blend-mode: darken;
 }
 
 /* Welcome Section */
@@ -82,6 +79,18 @@ nav a:hover {
     text-align: center;
     color: #ffffff; /* Pure white for brightness */
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* Brighter shadow for sharper text */
+}
+/* Styling for .h1-text */
+.h1-text {
+    background-color: #000; /* Black background */
+    width: 100%; /* Full-width */
+    height: auto; /* Adjust height automatically */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 10px 0; /* Add some vertical padding */
+    color: #fff; /* White text for contrast */
+    text-align: center; /* Center align text */
 }
 
 /* About Section */
