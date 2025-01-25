@@ -56,6 +56,10 @@ nav a:hover {
     left: 0;
     z-index: 1; /* Place it behind the text and nav */
 }
+/*Blurring the image*/
+.blur-image {
+    filter: blur(8px); /* Adjust blur intensity as needed */
+}
 
 /* Welcome Section */
 .home-section {
