@@ -50,15 +50,16 @@ nav a:hover {
 .background-container {
     width: 100%;
     height: 60vh; /* Full-screen height */
-    background-color: purple;
-    position: absolute;
-    top: 0;
-    left: 0;
+    background-image: url('https://github.com/Nelis01/portfolio/blob/main/Portfolio/images/Evolution-of-Coding-scaled.jpg?raw=true');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
     z-index: 1; /* Place it behind the text and nav */
-}
-/*Blurring the image*/
-.blur-image {
-    filter: blur(8px); /* Adjust blur intensity as needed */
+    filter: brightness(50%); /* Reduce the brightness of the background image */
+    /* Optional: Add a dark overlay for extra dimming */
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+    background-blend-mode: darken;
 }
 
 /* Welcome Section */
@@ -71,13 +72,14 @@ nav a:hover {
     position: relative; /* Relative positioning for layering */
     padding-top: 60px; /* To ensure it doesn't overlap with navbar */
     z-index: 2; /* Ensure it stays on top of the background */
+    color: #fff; /* Ensure text is visible over the background */
 }
 
 .home-section h1 {
     font-size: 3em;
     margin: 0;
     text-align: center;
-    color: #fff; /* Ensure text is visible over the purple background */
+    color: #fff; /* Ensure text is visible over the background */
 }
 
 /* About Section */
