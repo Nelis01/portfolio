@@ -29,7 +29,7 @@ nav {
     justify-content: flex-end; /* Align to the right */
     background-color: transparent; /* Transparent to show the background container */
     padding: 10px 20px;
-    position: fixed; /* Keep navbar visible when scrolling */
+    position: relative; /* The navbar moves with the rest of the page */
     top: 20px;
     z-index: 10;
 }
@@ -55,6 +55,7 @@ nav a:hover {
     top: 0;
     left: 0;
     z-index: 1; /* Place it behind the text and nav */
+    filter: blur(8px);
 }
 
 /* Welcome Section */
