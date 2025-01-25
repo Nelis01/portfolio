@@ -73,13 +73,15 @@ nav a:hover {
     padding-top: 60px; /* To ensure it doesn't overlap with navbar */
     z-index: 2; /* Ensure it stays on top of the background */
     color: #fff; /* Ensure text is visible over the background */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.4); /* Add brightness and sharpness */
 }
 
 .home-section h1 {
     font-size: 3em;
     margin: 0;
     text-align: center;
-    color: #fff; /* Ensure text is visible over the background */
+    color: #ffffff; /* Pure white for brightness */
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* Brighter shadow for sharper text */
 }
 
 /* About Section */
