@@ -1,13 +1,14 @@
 /* General Page Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #000; /* Black background */
-    color: #fff; /* White text for contrast */
+    background-color: #000;
+    color: #fff;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    scroll-behavior: smooth;
 }
 
 /* Typography */
@@ -19,17 +20,17 @@ h1, h2 {
 p {
     color: #ddd;
     font-size: 1em;
-    line-height: 1.8em; /* Double-spaced for better readability */
+    line-height: 1.8em;
 }
 
 /* Navigation Bar */
 nav {
     width: 90%;
     display: flex;
-    justify-content: flex-end; /* Align to the right */
-    background-color: transparent; /* Transparent to show the background container */
+    justify-content: flex-end;
+    background-color: transparent;
     padding: 10px 20px;
-    position: relative; /* The navbar moves with the rest of the page */
+    position: relative;
     top: 20px;
     z-index: 10;
 }
@@ -49,67 +50,75 @@ nav a:hover {
 /* Background Container */
 .background-container {
     width: 100%;
-    height: 60vh; /* Full-screen height */
+    height: 100vh;
     background-image: url('https://github.com/Nelis01/portfolio/raw/refs/heads/main/Portfolio/images/Background%20portfolio%20image.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     position: relative;
-    z-index: 1; /* Place it behind the text and nav */
-    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+.background-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 /* Welcome Section */
 .home-section {
     width: 100%;
-    height: 50vh; /* Full-screen height */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Relative positioning for layering */
-    padding-top: 60px; /* To ensure it doesn't overlap with navbar */
-    z-index: 2; /* Ensure it stays on top of the background */
-    color: #fff; /* Ensure text is visible over the background */
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.4); /* Add brightness and sharpness */
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.4);
 }
 
 .home-section h1 {
     font-size: 3em;
     margin: 0;
     text-align: center;
-    color: #ffffff; /* Pure white for brightness */
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7); /* Brighter shadow for sharper text */
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7);
 }
-/* Styling for .h1-text */
+
 .h1-text {
-    background-color: #000; /* Black background */
-    width: 100%; /* Full-width */
-    height: auto; /* Adjust height automatically */
-    display: flex; /* Flexbox for centering content */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    padding: 10px 0; /* Add some vertical padding */
-    color: #fff; /* White text for contrast */
-    text-align: center; /* Center align text */
+    background-color: #000;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
 }
 
 /* About Section */
 .about-section {
     width: 100%;
-    margin-top: 100vh; /* Push the about-section below the background-container */
     padding: 50px 20px;
-    background-color: #111; /* Dark background to contrast with the purple */
+    background-color: #111;
     color: #fff;
 }
 
 .about-container {
-    background-color: #222; /* Subtle background for content block */
+    background-color: #222;
     padding: 20px 40px;
     border-radius: 10px;
     width: 80%;
-    margin: 0 auto; /* Center container horizontally */
+    margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
 .about-container p {
@@ -136,10 +145,16 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
-.project-row .project-item {
+.project-item {
     flex: 1;
     max-width: 300px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .project-row img {
@@ -151,6 +166,24 @@ nav a:hover {
 
 .project-row p {
     margin-top: 10px;
+    color: #ddd;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    background-color: #111;
+    border-top: 1px solid #333;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
     color: #ddd;
 }
 
