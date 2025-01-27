@@ -192,11 +192,12 @@ nav a:hover {
 /* About Section */
 
 .about-section {
-    background: linear-gradient(135deg, #111, #222);
+    background-color: #000;
     padding: 50px 20px;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    color: white;
 }
 
 .about-section.visible {
@@ -205,15 +206,26 @@ nav a:hover {
 }
 
 .about-container {
-    background-color: #222;
+    background-color: transparent;
     padding: 20px 40px;
     border-radius: 10px;
     width: 80%;
     margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1); /*subtle white border*/
+}
+.about-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007BFF; /* Add a pop of color */
 }
 
+.about-container p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #ddd; /* Light gray text for better contrast */
+    margin-bottom: 20px;
+}
 .profile-image {
     width: 150px;
     height: 150px;
@@ -232,7 +244,7 @@ nav a:hover {
 .skills-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     flex-wrap: wrap;
     margin-top: 20px;
 }
