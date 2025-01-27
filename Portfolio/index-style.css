@@ -100,7 +100,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
     color: #fff;
     text-align: center;
 }
@@ -109,7 +109,7 @@ nav a:hover {
 .h1-about {
     width: 100%; /* Full width */
     text-align: center; /* Center align text */
-    padding: 20px 0; /* Add padding for spacing */
+    padding: 10px 0; /* Add padding for spacing */
 }
 
 .h1-about p {
