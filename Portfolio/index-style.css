@@ -30,8 +30,8 @@ nav {
     justify-content: flex-end;
     background-color: transparent;
     padding: 10px 20px;
-    position: relative;
-    top: 10px;
+    position: absolute;
+    top: 20px;
     z-index: 10;
 }
 
