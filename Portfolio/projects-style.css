@@ -1,6 +1,6 @@
 /* General Page Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #000; /* Black background */
     color: #fff; /* White text for contrast */
     margin: 0;
@@ -8,12 +8,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(to bottom, #000, #111);
+}
+
+/*Smooth scroll effect*/
+html{
+    scroll-behavior: smooth;
 }
 
 /* Typography */
 h1, h2 {
     font-family: 'Arial', sans-serif;
     color: #fff;
+    font-weight: 600;
 }
 
 p {
@@ -48,6 +55,10 @@ nav a:hover {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minimax(300px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
 }
 
 .project {
@@ -65,6 +76,11 @@ nav a:hover {
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
 }
 
 .project-container img {
@@ -79,6 +95,98 @@ nav a:hover {
     flex: 1;
     font-size: 1em;
     color: #ddd;
+}
+.project-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #0056b3;
+}
+
+/* Testimonials section*/
+.testimonials-section {
+    padding: 50px 20px;
+    background-color: #222;
+    width: 100%;
+    text-align: center;
+}
+
+.testimonial {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.testimonial-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    color: #fff;
+    font-weight: 600;
+}
+
+/*Call to action (CTA) section*/
+.cta-section {
+    padding: 50px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #fff;
+    color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/*Footer section*/
+footer {
+    padding: 20px;
+    background-color: #111;
+    color: #ddd;
+    text-align: center;
+}
+
+.social-links a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007BFF;
 }
 
 /* Responsive Design */
