@@ -284,6 +284,7 @@ nav a:hover {
     padding: 50px 0;
     background-color: #000; /* Black background for a sleek look */
     color: #fff;
+    margin-left: 20px;
 }
 
 .projects-section h2 {
