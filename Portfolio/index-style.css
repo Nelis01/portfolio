@@ -298,10 +298,12 @@ nav a:hover {
     gap: 40px; /* Increased gap for better spacing */
     margin-bottom: 40px; /* Added margin between rows */
     padding: 0 20px; /* Add padding to prevent content from touching edges */
+    border: 2px solid red;
 }
 
 .project-row.reverse {
     flex-direction: row-reverse; /* Reverse the direction for alternating layout */
+    border: 2px solid blue;
 }
 
 .project-item {
@@ -317,11 +319,11 @@ nav a:hover {
 
 .project-item img {
     width: 100%; /* Ensure images take full width of their container */
-    max-width: 300px;
+    max-width: 400px;
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px;
     object-fit: cover;
-    max-height: 250px; /* Reduce image size for better balance */
+    max-height: 300px; /* Reduce image size for better balance */
     transition: transform 0.3s ease;
 }
 
