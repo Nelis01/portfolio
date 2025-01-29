@@ -121,6 +121,7 @@ nav a:hover {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .testimonial {
